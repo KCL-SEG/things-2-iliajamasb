@@ -11,9 +11,9 @@ class ThingForm(forms.Form):
         #fields = ['name', 'description', 'quantity']
 
 
-    Name = forms.CharField(label='Name', max_length=35, required=True)
-    Description = forms.CharField(widget=forms.Textarea, label='Description', max_length=120, required=False)
-    Quantity = forms.IntegerField(
+    name = forms.CharField(label='Name', max_length=35, required=True)
+    description = forms.CharField(widget=forms.Textarea, label='Description', max_length=120, required=False)
+    quantity = forms.IntegerField(
         widget=forms.NumberInput(),
         validators=[MinValueValidator(0),MaxValueValidator(50)]
     )

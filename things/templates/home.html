@@ -7,7 +7,7 @@
     Welcome to the register page!
   </h1>
   <p>Please register the thing below:</p>
-  <form action="{% url 'register_thing' %}" method="post">
+  <form action="{% url 'home' %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value= "Register">

@@ -12,11 +12,11 @@ class ThingForm(forms.Form):
 
 
     name = forms.CharField(label='Name', max_length=35, required=True)
-    description = forms.CharField(label='Description', max_length=120, required=True)
+    description = forms.CharField(label='Description', max_length=120, required=False)
     quantity = forms.IntegerField(
         validators=[MinValueValidator(0),MaxValueValidator(50)]
     )
-    widgets = { "description": forms.Textarea(), "quantity": forms.NumberInput() }
+    widgets = { "Description": forms.Textarea(), "Quantity": forms.NumberInput() }
 
 
 # Create your forms here.

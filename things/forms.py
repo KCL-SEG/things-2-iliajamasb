@@ -1,7 +1,7 @@
 """Forms of the project."""
 from django import forms
 
-class registerThing(forms.Form):
+class ThingForm(forms.Form):
 
     name = forms.CharField(label='Name')
     description = forms.CharField(label='Description')
